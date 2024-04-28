@@ -1,0 +1,127 @@
+header.flex{
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin-top: 1rem;
+}
+header.flex nav{
+ background-color: var(--bgheader);
+ padding: 0.77rem 0;
+ padding-right: 30px;
+ border-radius: 55px;
+ box-shadow: 1px 1px 40px #ffffff17 ;
+}
+
+header ul.flex{
+  gap: 16px;
+
+}
+header ul li a{
+  color: var(--titel);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+header ul li a:hover{
+color: var(--blue);
+opacity: 1;
+font-size: 0.9rem;
+}
+
+header button.menu{
+  display: none;
+}
+
+header button{
+  font-size: 1.2em; 
+}
+header .fixed{
+ position: fixed;
+ inset: 0;
+ background-color: rgba(41, 41, 49, 0.768);
+}
+
+header .icon-menu, header .mode{
+  background-color: var(--bgheader);
+  height: 2.4rem;
+  width: 2.4rem;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--subtitel);
+  border: 1px solid rgba(248, 192, 95, 0.567);
+  transition: 0.2s;
+  box-shadow: 1px 1px 10px rgb(0, 0, 255 , 0.2);
+}
+header .icon-menu:hover , header .mode:hover{
+  color: var(--titel);
+  border: 1px solid rgb(248, 192, 95);
+  cursor: pointer;
+
+}
+
+header .icon-cross{
+  font-size: 1.3rem;
+  color: var(--subtitel);
+  transition: 0.3s;
+
+}
+
+header .icon-cross:hover{
+  font-size: 1.6rem;
+  color: crimson;
+  rotate: 180deg;
+
+}
+
+@keyframes mymove {
+  0%{
+    scale: 0;
+  }
+  60%{
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+header .fixed ul.modal{
+  animation: mymove 0.7s 1;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--secndery);
+}
+
+header .fixed ul.modal li{
+  border-bottom: 1px solid var(--border);
+  padding: 0.77rem;
+
+}
+header .fixed ul.modal li:last-child{
+  border: none;
+}
+header .fixed ul.modal li a{
+  font-size: 1rem;
+}
+header .fixed ul.modal li:first-child{
+ text-align: right;
+ border: none;
+ padding: 0;
+ margin-bottom: -1rem;
+}
+.icon-sun{
+  color: orange;
+}
+
+
+@media(max-width: 700px){
+  header.flex nav{display: none;}
+  header button.menu{
+    display: block;
+  }
+
+}
